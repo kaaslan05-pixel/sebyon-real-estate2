@@ -5,29 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sebyon Real Estate | Costa del Sol</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
---sand:#F4EFE6;
---dark:#1F2A36;
---accent:#C7A14A;
+--gold:#C7A14A;
+--dark:#0F1A24;
 --light:#ffffff;
 }
 
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:var(--sand);
-color:var(--dark);
+color:white;
+background:#0F1A24;
 }
 
+/* NAVIGATION */
 header{
 position:fixed;
 width:100%;
 top:0;
-background:rgba(31,42,54,0.95);
-color:white;
+background:rgba(0,0,0,0.5);
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
@@ -37,21 +36,22 @@ z-index:1000;
 
 .logo{
 font-family:'Playfair Display',serif;
-font-size:24px;
-letter-spacing:2px;
+font-size:26px;
+letter-spacing:3px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:25px;
+margin-left:30px;
 font-size:14px;
 }
 
+/* HERO */
 .hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-url('https://images.unsplash.com/photo-1505842465776-3ac1a73b2f13?q=80&w=2000');
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)),
+url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -59,65 +59,73 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-color:white;
 padding:0 20px;
 }
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:60px;
+font-size:70px;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
+font-size:20px;
 font-weight:300;
-max-width:700px;
+max-width:750px;
 }
 
-.section{
-padding:100px 8%;
+/* SECTION WITH VILLA IMAGE */
+.luxury-section{
+height:70vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2000');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
 }
 
-.section h2{
+.luxury-section h2{
 font-family:'Playfair Display',serif;
-font-size:36px;
-margin-bottom:30px;
+font-size:48px;
 }
 
-.intro{
-background:white;
+/* PROPERTIES */
+.properties{
+padding:100px 8%;
+background:#111c27;
 text-align:center;
 }
 
-.intro p{
-max-width:800px;
-margin:auto;
-line-height:1.7;
+.properties h2{
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin-bottom:60px;
 }
 
-.properties{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:40px;
-margin-top:40px;
 }
 
 .card{
-background:white;
-border-radius:12px;
+background:#182635;
+border-radius:15px;
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
 .card img{
 width:100%;
-height:240px;
+height:250px;
 object-fit:cover;
 }
 
@@ -126,34 +134,34 @@ padding:25px;
 }
 
 .card h3{
-margin:0 0 10px 0;
 font-family:'Playfair Display',serif;
+margin:0 0 10px 0;
 }
 
 .price{
-color:var(--accent);
+color:var(--gold);
 font-weight:600;
-font-size:18px;
 }
 
-.footer{
-background:var(--dark);
-color:white;
+/* FOOTER */
+footer{
+background:black;
 text-align:center;
 padding:40px;
 }
 
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:30px;
 right:30px;
 background:#25D366;
 color:white;
-padding:15px 20px;
+padding:16px 22px;
 border-radius:50px;
 text-decoration:none;
 font-weight:500;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 </style>
 </head>
@@ -170,19 +178,18 @@ box-shadow:0 5px 20px rgba(0,0,0,0.2);
 </header>
 
 <section class="hero">
-<h1>Handpicked Investment Opportunities</h1>
-<p>Vi erbjuder noggrant utvalda bostäder på Costa del Sol – med fokus på värde, kvalitet och långsiktig investering.</p>
+<h1>Luxury Living on Costa del Sol</h1>
+<p>Handpicked villas and apartments with exceptional value, strong investment potential and Mediterranean lifestyle quality.</p>
 </section>
 
-<section class="section intro">
-<h2>Exklusivt urval – inte massmarknad</h2>
-<p>Vi arbetar inte med tusentals objekt. Istället kuraterar vi bostäder med starkt värde, attraktivt läge och hög livskvalitet. Vårt fokus är skandinaviska köpare som söker trygghet och långsiktig kvalitet i Spanien.</p>
+<section class="luxury-section">
+<h2>Exclusively Curated Properties</h2>
 </section>
 
-<section class="section">
-<h2>Utvalda Objekt</h2>
+<section class="properties">
+<h2>Featured Investments</h2>
 
-<div class="properties">
+<div class="grid">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000">
@@ -203,7 +210,7 @@ box-shadow:0 5px 20px rgba(0,0,0,0.2);
 <div class="card">
 <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1000">
 <div class="card-content">
-<h3>Sea View Penthouse Benahavis</h3>
+<h3>Sea View Penthouse Benahavís</h3>
 <p class="price">€1,150,000</p>
 </div>
 </div>
@@ -211,15 +218,15 @@ box-shadow:0 5px 20px rgba(0,0,0,0.2);
 </div>
 </section>
 
-<section class="section" id="contact">
-<h2>Kontakt</h2>
+<section id="contact" style="padding:100px 8%; text-align:center; background:#0F1A24;">
+<h2 style="font-family:'Playfair Display',serif;">Contact</h2>
 <p>Email: info@sebyon.com</p>
-<p>Telefon: +46 70 355 55 73</p>
+<p>WhatsApp: +46 70 355 55 73</p>
 </section>
 
-<div class="footer">
+<footer>
 © 2026 Sebyon Real Estate – Costa del Sol
-</div>
+</footer>
 
 <a href="https://wa.me/46703555573" target="_blank" class="whatsapp">
 WhatsApp
