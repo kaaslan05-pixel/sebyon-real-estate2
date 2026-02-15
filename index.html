@@ -9,7 +9,7 @@
 
 <style>
 :root{
---sand:#F5F1E8;
+--sand:#F4EFE6;
 --dark:#1F2A36;
 --accent:#C7A14A;
 --light:#ffffff;
@@ -37,21 +37,19 @@ z-index:1000;
 
 .logo{
 font-family:'Playfair Display',serif;
-font-size:26px;
+font-size:24px;
 letter-spacing:2px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:30px;
-font-weight:300;
+margin-left:25px;
 font-size:14px;
-letter-spacing:1px;
 }
 
 .hero{
-height:90vh;
+height:100vh;
 background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
 url('https://images.unsplash.com/photo-1505842465776-3ac1a73b2f13?q=80&w=2000');
 background-size:cover;
@@ -67,14 +65,14 @@ padding:0 20px;
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:56px;
+font-size:60px;
 margin-bottom:20px;
-font-weight:600;
 }
 
 .hero p{
 font-size:18px;
 font-weight:300;
+max-width:700px;
 }
 
 .section{
@@ -84,18 +82,30 @@ padding:100px 8%;
 .section h2{
 font-family:'Playfair Display',serif;
 font-size:36px;
-margin-bottom:40px;
+margin-bottom:30px;
+}
+
+.intro{
+background:white;
+text-align:center;
+}
+
+.intro p{
+max-width:800px;
+margin:auto;
+line-height:1.7;
 }
 
 .properties{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:40px;
+margin-top:40px;
 }
 
 .card{
-background:var(--light);
-border-radius:10px;
+background:white;
+border-radius:12px;
 overflow:hidden;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 transition:0.3s;
@@ -126,41 +136,24 @@ font-weight:600;
 font-size:18px;
 }
 
-.filter{
-margin-bottom:50px;
-}
-
-input{
-padding:10px;
-border:1px solid #ddd;
-border-radius:5px;
-margin-right:10px;
-}
-
-button{
-background:var(--accent);
-color:white;
-border:none;
-padding:10px 20px;
-cursor:pointer;
-border-radius:5px;
-}
-
-.home-management{
-background:white;
-}
-
-footer{
+.footer{
 background:var(--dark);
 color:white;
 text-align:center;
 padding:40px;
 }
 
-.lang{
-cursor:pointer;
-margin-left:20px;
-font-size:13px;
+.whatsapp{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:500;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 </style>
 </head>
@@ -170,102 +163,67 @@ font-size:13px;
 <header>
 <div class="logo">SEBYON</div>
 <nav>
-<a href="#properties">Properties</a>
-<a href="#home">Home Management</a>
+<a href="index.html">Home</a>
+<a href="home-management.html">Home Management</a>
 <a href="#contact">Contact</a>
-<span class="lang" onclick="toggleLanguage()">SV / EN</span>
 </nav>
 </header>
 
 <section class="hero">
-<h1 id="heroTitle">Exklusiva bostäder på Costa del Sol</h1>
-<p id="heroSub">Din skandinaviska partner i Spanien</p>
+<h1>Handpicked Investment Opportunities</h1>
+<p>Vi erbjuder noggrant utvalda bostäder på Costa del Sol – med fokus på värde, kvalitet och långsiktig investering.</p>
 </section>
 
-<section class="section" id="properties">
+<section class="section intro">
+<h2>Exklusivt urval – inte massmarknad</h2>
+<p>Vi arbetar inte med tusentals objekt. Istället kuraterar vi bostäder med starkt värde, attraktivt läge och hög livskvalitet. Vårt fokus är skandinaviska köpare som söker trygghet och långsiktig kvalitet i Spanien.</p>
+</section>
+
+<section class="section">
 <h2>Utvalda Objekt</h2>
 
-<div class="filter">
-<input type="number" id="maxPrice" placeholder="Maxpris €">
-<button onclick="filterProperties()">Filtrera</button>
+<div class="properties">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000">
+<div class="card-content">
+<h3>Luxury Villa Marbella</h3>
+<p class="price">€2,450,000</p>
+</div>
 </div>
 
-<div class="properties" id="propertyList"></div>
-</section>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1000">
+<div class="card-content">
+<h3>Modern Apartment Estepona</h3>
+<p class="price">€595,000</p>
+</div>
+</div>
 
-<section class="section home-management" id="home">
-<h2>Home Management</h2>
-<p>Vi erbjuder komplett service för skandinaver i Spanien: tillsyn av bostad, nyckelhantering, flyttservice, städning, renoveringssamordning och trygg övervakning året runt.</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1000">
+<div class="card-content">
+<h3>Sea View Penthouse Benahavis</h3>
+<p class="price">€1,150,000</p>
+</div>
+</div>
+
+</div>
 </section>
 
 <section class="section" id="contact">
 <h2>Kontakt</h2>
-<p>Email: info@sebyonrealestate.com</p>
-<p>Telefon: +34 600 000 000</p>
+<p>Email: info@sebyon.com</p>
+<p>Telefon: +46 70 355 55 73</p>
 </section>
 
-<footer>
-  <footer>
+<div class="footer">
 © 2026 Sebyon Real Estate – Costa del Sol
-
-<br><br>
-
-<a href="https://wa.me/46703555573" target="_blank" 
-style="background:#25D366;
-color:white;
-padding:12px 18px;
-border-radius:40px;
-text-decoration:none;
-font-weight:500;">
-Chatta med oss på WhatsApp
-</a>
-
-</footer>
-</footer>
-
-<script>
-const properties=[
-{title:"Luxury Villa Marbella",price:2450000,img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000"},
-{title:"Modern Apartment Estepona",price:595000,img:"https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1000"},
-{title:"Sea View Penthouse Benahavis",price:1150000,img:"https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1000"}
-];
-
-function displayProperties(list){
-const container=document.getElementById("propertyList");
-container.innerHTML="";
-list.forEach(p=>{
-container.innerHTML+=`
-<div class="card">
-<img src="${p.img}">
-<div class="card-content">
-<h3>${p.title}</h3>
-<p class="price">€${p.price.toLocaleString()}</p>
 </div>
-</div>`;
-});
-}
 
-function filterProperties(){
-const max=document.getElementById("maxPrice").value;
-if(!max){displayProperties(properties);return;}
-displayProperties(properties.filter(p=>p.price<=max));
-}
-
-displayProperties(properties);
-
-let lang="sv";
-function toggleLanguage(){
-if(lang==="sv"){
-document.getElementById("heroTitle").innerText="Exclusive Homes on Costa del Sol";
-document.getElementById("heroSub").innerText="Your Scandinavian partner in Spain";
-lang="en";
-}else{
-document.getElementById("heroTitle").innerText="Exklusiva bostäder på Costa del Sol";
-document.getElementById("heroSub").innerText="Din skandinaviska partner i Spanien";
-lang="sv";
-}
-}
-</script>
+<a href="https://wa.me/46703555573" target="_blank" class="whatsapp">
+WhatsApp
+</a>
 
 </body>
 </html>
