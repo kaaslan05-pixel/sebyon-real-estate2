@@ -3,93 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebyon Real Estate | Malaga - Estepona</title>
+    <title>Sebyon Real Estate | Malaga - Estepona | Costa del Sol</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --gold: #C7A14A;
             --dark: #0F1A24;
             --darker: #080e14;
-            --transition: all 0.3s ease;
+            --light-gray: #f4f4f4;
+            --transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         * { box-sizing: border-box; }
-        body { margin: 0; font-family: 'Inter', sans-serif; color: white; background: var(--dark); line-height: 1.6; scroll-behavior: smooth; }
+        body { margin: 0; font-family: 'Inter', sans-serif; color: white; background: var(--dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
 
         /* HEADER */
         header {
-            position: fixed; width: 100%; top: 0; background: rgba(15, 26, 36, 0.95);
+            position: fixed; width: 100%; top: 0; background: rgba(15, 26, 36, 0.98);
             padding: 15px 5%; display: flex; justify-content: space-between; align-items: center;
             z-index: 1000; border-bottom: 1px solid rgba(199, 161, 74, 0.2);
             backdrop-filter: blur(10px);
         }
         .logo { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--gold); text-decoration: none; font-weight: 700; letter-spacing: 3px; }
-        nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+        nav a { color: white; text-decoration: none; margin-left: 15px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
         nav a:hover { color: var(--gold); }
 
-        /* HERO */
+        /* HERO - FULL BILD PÅ MEDELHAVET */
         .hero {
-            height: 75vh;
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(15, 26, 36, 0.9)),
-                        url('https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=1600');
-            background-size: cover; background-position: center;
+            height: 85vh;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(15, 26, 36, 0.9)),
+                        url('https://images.unsplash.com/photo-1590710641047-38f32a768f5c?q=80&w=2000'); /* Exklusiv Costa del Sol vy */
+            background-size: cover; background-position: center; background-attachment: fixed;
             display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-            padding: 0 20px;
+            padding: 0 20px; padding-top: 80px;
         }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 56px); margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; font-weight: 300; color: #ddd; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 56px); margin-bottom: 10px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.2rem; font-weight: 300; color: #ddd; max-width: 600px; }
 
-        /* TJÄNSTER BOXAR */
+        /* TJÄNSTER BOXAR - HÖGST UPP */
         .services {
             padding: 0 5% 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px; background: transparent; margin-top: -60px; position: relative; z-index: 10;
+            gap: 20px; background: transparent; margin-top: -80px; position: relative; z-index: 10;
         }
         .service-box {
-            background: #121f2b; padding: 35px 25px; text-align: center; border: 1px solid rgba(199, 161, 74, 0.15);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: var(--transition);
+            background: #121f2b; padding: 40px 25px; text-align: center; border: 1px solid rgba(199, 161, 74, 0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4); transition: var(--transition);
         }
-        .service-box:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .service-box:hover { border-color: var(--gold); transform: translateY(-5px); background: rgba(199, 161, 74, 0.05); }
         .service-box h3 { color: var(--gold); font-family: 'Playfair Display', serif; margin-bottom: 12px; font-size: 20px; }
         .service-box p { font-size: 13px; color: #aaa; margin: 0; }
 
-        /* SECTION STYLING */
+        /* SEKTIONER */
         .section-title { text-align: center; padding: 100px 5% 40px; }
         .section-title h2 { font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 10px; }
         .section-title p { color: var(--gold); text-transform: uppercase; font-size: 12px; letter-spacing: 2px; }
 
         .property-grid { padding: 0 5% 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; }
 
-        /* PROPERTY CARDS */
+        /* KORT - LYXIGARE KÄNSLA */
         .card { background: #121f2b; border-radius: 2px; overflow: hidden; border: 1px solid rgba(255,255,255,0.03); transition: var(--transition); }
-        .card:hover { transform: translateY(-8px); border-color: rgba(199, 161, 74, 0.3); }
-        .card-img { width: 100%; height: 250px; object-fit: cover; }
+        .card:hover { transform: translateY(-8px); border-color: rgba(199, 161, 74, 0.3); box-shadow: 0 15px 40px rgba(0,0,0,0.5); }
+        .card-img-holder { height: 260px; overflow: hidden; position: relative; }
+        .card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .card:hover img { transform: scale(1.05); }
+        
         .card-content { padding: 25px; }
-        .tag { background: var(--gold); color: black; padding: 3px 10px; font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; display: inline-block; }
-        .card h3 { margin: 5px 0 10px; font-family: 'Playfair Display', serif; font-size: 22px; }
+        .tag { background: var(--gold); color: black; padding: 4px 12px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; letter-spacing: 1px; margin-bottom: 15px; display: inline-block; }
+        .card h3 { margin: 5px 0 10px; font-family: 'Playfair Display', serif; font-size: 22px; color: white; }
         .price { color: white; font-weight: 600; font-size: 20px; display: block; margin-bottom: 15px; }
-        .info { font-size: 13px; color: #999; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px; display: flex; gap: 15px; }
+        .info { font-size: 13px; color: #bbb; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px; display: flex; gap: 15px; }
 
-        /* CONTACT SECTION */
+        /* KONTAKT PREMIUM - STÖRRE BREV & FINARE */
         .contact-premium {
-            background: var(--darker); padding: 100px 5%; text-align: center; border-top: 1px solid rgba(199, 161, 74, 0.1);
+            background: var(--darker); padding: 120px 5%; text-align: center; border-top: 1px solid rgba(199, 161, 74, 0.1);
         }
-        .icon-wrap { font-size: 40px; color: var(--gold); margin-bottom: 20px; }
-        .contact-premium h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 20px; }
+        .contact-icon-wrap { font-size: 80px; color: var(--gold); margin-bottom: 25px; display: block; }
+        .contact-premium h2 { font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 20px; color: white; }
+        .contact-premium p { font-size: 1.1rem; color: #aaa; max-width: 500px; margin: 0 auto 30px; }
         .contact-btn {
-            display: inline-block; padding: 15px 40px; border: 1px solid var(--gold); color: var(--gold);
+            display: inline-block; padding: 16px 45px; border: 1px solid var(--gold); color: var(--gold);
             text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: 2px;
-            transition: var(--transition); margin-top: 20px;
+            transition: var(--transition); margin-top: 20px; font-weight: 600;
         }
-        .contact-btn:hover { background: var(--gold); color: black; }
+        .contact-btn:hover { background: var(--gold); color: black; transform: scale(1.05); }
 
-        /* WHATSAPP FIXED */
+        /* FOOTER */
+        footer { padding: 40px; text-align: center; font-size: 12px; color: #555; background: #050a0f; border-top: 1px solid rgba(255,255,255,0.03); }
+
+        /* WHATSAPP FLOAT */
         .wa-float {
             position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white;
             width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; font-size: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4); z-index: 1000; text-decoration: none; font-size: 28px;
+            transition: var(--transition);
         }
+        .wa-float:hover { transform: scale(1.1) rotate(5deg); background: #1ebd5a; }
 
-        footer { padding: 40px; text-align: center; font-size: 12px; color: #555; background: #050a0f; }
     </style>
 </head>
 <body>
@@ -105,14 +114,14 @@
 </header>
 
 <section class="hero">
-    <h1>Malaga till Estepona</h1>
-    <p>Handplockade fastigheter för en exklusiv livsstil</p>
+    <h1>Costa del Sol</h1>
+    <p>Premiumfastigheter och Management från Malaga till Estepona</p>
 </section>
 
 <section class="services">
     <div class="service-box">
         <h3>Försäljning</h3>
-        <p>Expertis inom lyxfastigheter från Malaga till Estepona.</p>
+        <p>Expertis inom lyxfastigheter på Costa del Sol.</p>
     </div>
     <div class="service-box">
         <h3>Off-Plan</h3>
@@ -120,54 +129,61 @@
     </div>
     <div class="service-box">
         <h3>Management</h3>
-        <p>Fullservice för ditt hem. Tillsyn, städning och nyckelhantering.</p>
+        <p>Städning, tillsyn och nyckelhantering när du inte är på plats.</p>
     </div>
     <div class="service-box">
         <h3>Inredning</h3>
-        <p>Vi skapar tidlösa hem med en mix av skandinaviskt och spanskt.</p>
+        <p>Skandinavisk design möter andalusisk charm.</p>
     </div>
 </section>
 
 <section id="offplan">
     <div class="section-title">
-        <p>Exklusiva Nyheter</p>
+        <p>Leverans Q3 2027</p>
         <h2>New Releases - El Higuerón</h2>
     </div>
     <div class="property-grid">
         <div class="card">
-            <img src="https://images.pexels.com/photos/5997994/pexels-photo-5997994.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
-            <div class="card-content">
+            <div class="card-img-holder">
                 <span class="tag" style="background:#e74c3c; color:white;">Q3 2027</span>
-                <h3>Higuerón South Residences</h3>
-                <span class="price">Från €645,000</span>
-                <p>Panoramautsikt över Fuengirola-bukten. Garden villas & Penthouses.</p>
-                <div class="info"><span>2-3 Sovrum</span><span>Beach Club Access</span></div>
+                <img src="https://images.unsplash.com/photo-1590710641047-38f32a768f5c?q=80&w=2000" alt="Prime Invest Veridian"> </div>
+            <div class="card-content">
+                <h3>Prime Invest Veridian</h3>
+                <span class="price">Från €1,000,000</span>
+                <p>El Higuerón, Fuengirola. Exklusiv nyproduktion. </p>
+                <div class="info"><span>Leverans Q3 2027</span><span>Gated Area</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/7031406/pexels-photo-7031406.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
-            <div class="card-content">
+            <div class="card-img-holder">
                 <span class="tag" style="background:#e74c3c; color:white;">Q3 2027</span>
-                <h3>The Sky Loft - Phase II</h3>
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800" alt="Sky Loft">
+            </div>
+            <div class="card-content">
+                <h3>The Sky Loft Phase II</h3>
                 <span class="price">Från €585,000</span>
                 <p>Minimalistisk design i hjärtat av El Higuerón. Stora terrasser.</p>
-                <div class="info"><span>2 Sovrum</span><span>Infinity Pool</span></div>
+                <div class="info"><span>2 Sovrum</span><span>Spa & Gym</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
-            <div class="card-content">
+            <div class="card-img-holder">
                 <span class="tag" style="background:#e74c3c; color:white;">Q3 2027</span>
+                <img src="https://images.unsplash.com/photo-1599809278802-1880e9735288?q=80&w=800" alt="Azure Heights">
+            </div>
+            <div class="card-content">
                 <h3>Azure Heights</h3>
                 <span class="price">Från €720,000</span>
                 <p>Ett steg från Curio Collection by Hilton och Sport Club.</p>
-                <div class="info"><span>3 Sovrum</span><span>Privat Spa</span></div>
+                <div class="info"><span>3 Sovrum</span><span>Gated Area</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
-            <div class="card-content">
+            <div class="card-img-holder">
                 <span class="tag" style="background:#e74c3c; color:white;">Q3 2027</span>
+                <img src="https://images.unsplash.com/photo-1506197061617-7f5c0b093236?q=80&w=800" alt="Palm View">
+            </div>
+            <div class="card-content">
                 <h3>Palm View El Higuerón</h3>
                 <span class="price">Från €535,000</span>
                 <p>Inbäddat i grönska med fokus på hållbarhet och ljus.</p>
@@ -175,13 +191,15 @@
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/221506/pexels-photo-221506.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
-            <div class="card-content">
+            <div class="card-img-holder">
                 <span class="tag" style="background:#e74c3c; color:white;">Q3 2027</span>
+                <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=800" alt="Penthouse Edition">
+            </div>
+            <div class="card-content">
                 <h3>The Penthouse Edition</h3>
                 <span class="price">Från €1,250,000</span>
                 <p>Ultimat lyx högst upp i Higuerón West. Egen pool på taket.</p>
-                <div class="info"><span>4 Sovrum</span><span>360 Utsikt</span></div>
+                <div class="info"><span>4 Sovrum</span><span>Takpool</span></div>
             </div>
         </div>
     </div>
@@ -194,39 +212,47 @@
     </div>
     <div class="property-grid">
         <div class="card">
-            <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
-            <div class="card-content">
+            <div class="card-img-holder">
                 <span class="tag">Villa</span>
-                <h3>Villa Casa Blanca</h3>
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800" alt="Villa Andalusia">
+            </div>
+            <div class="card-content">
+                <h3>Villa Andalusia</h3>
                 <span class="price">€1,595,000</span>
-                <p>Benahavís. Modern andalusisk villa med privat trädgård och pool.</p>
+                <p>Benahavís. Modern andalusisk villa med trädgård och pool.</p>
                 <div class="info"><span>5 Sovrum</span><span>480 m²</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
-            <div class="card-content">
+            <div class="card-img-holder">
                 <span class="tag">Lägenhet</span>
-                <h3>Marbella Golden Mile Apt</h3>
+                <img src="https://images.unsplash.com/photo-1560185007-9f06086e379c?q=80&w=800" alt="Golden Mile Apt">
+            </div>
+            <div class="card-content">
+                <h3>Marbella Golden Mile</h3>
                 <span class="price">€895,000</span>
                 <p>Exklusivt läge i Puente Romano-området. Toppskick.</p>
                 <div class="info"><span>3 Sovrum</span><span>145 m²</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
-            <div class="card-content">
+            <div class="card-img-holder">
                 <span class="tag">Lägenhet</span>
+                <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=800" alt="Beachfront Estepona">
+            </div>
+            <div class="card-content">
                 <h3>Beachfront Estepona</h3>
                 <span class="price">€575,000</span>
-                <p>Ljus hörnlägenhet med terrass mot havet. Gångavstånd till allt.</p>
+                <p>Ljus hörnlägenhet med terrass mot havet. Gångavstånd.</p>
                 <div class="info"><span>2 Sovrum</span><span>110 m²</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
-            <div class="card-content">
+            <div class="card-img-holder">
                 <span class="tag">Lägenhet</span>
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800" alt="Golf Villa">
+            </div>
+            <div class="card-content">
                 <h3>La Cala Golf View</h3>
                 <span class="price">€425,000</span>
                 <p>Modern lägenhet i Mijas med utsikt över golfbanan.</p>
@@ -234,12 +260,14 @@
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
-            <div class="card-content">
+            <div class="card-img-holder">
                 <span class="tag">Lägenhet</span>
+                <img src="https://images.unsplash.com/photo-1600040333390-bf0611620950?q=80&w=800" alt="Casares Finca">
+            </div>
+            <div class="card-content">
                 <h3>Malaga East Heritage</h3>
-                <span class="price">€650,000</span>
-                <p>Klassisk våning i El Limonar. Högt i tak och bevarade detaljer.</p>
+                <span class="price">€655,000</span>
+                <p>Klassisk våning i El Limonar. Högt i tak och charm.</p>
                 <div class="info"><span>3 Sovrum</span><span>160 m²</span></div>
             </div>
         </div>
@@ -253,52 +281,62 @@
     </div>
     <div class="property-grid">
         <div class="card">
-            <img src="https://images.pexels.com/photos/2096907/pexels-photo-2096907.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
+            <div class="card-img-holder">
+                <span class="tag" style="background:#3498db; color:white;">Hyr</span>
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800" alt="Marbella Beach Villa">
+            </div>
             <div class="card-content">
-                <span class="tag" style="background:#3498db; color:white;">Uthyres</span>
-                <h3>Villa Puerto Banus</h3>
-                <span class="price">€8,500 / vecka</span>
-                <p>Semesterboende i världsklass, ett stenkast från hamnen.</p>
+                <h3>Puerto Banus Beach Villa</h3>
+                <span class="price">€9,500 / vecka</span>
+                <p>Semesterboende i världsklass, steg från hamnen.</p>
                 <div class="info"><span>6 Sovrum</span><span>Pool</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
+            <div class="card-img-holder">
+                <span class="tag" style="background:#3498db; color:white;">Hyr</span>
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800" alt="Higueron Loft">
+            </div>
             <div class="card-content">
-                <span class="tag" style="background:#3498db; color:white;">Uthyres</span>
                 <h3>Higueron Sea View Loft</h3>
-                <span class="price">€2,200 / vecka</span>
-                <p>Modern semesterlägenhet med tillgång till spa och gym.</p>
+                <span class="price">€2,400 / vecka</span>
+                <p>Modern semesterlägenhet med spa och gym access.</p>
                 <div class="info"><span>2 Sovrum</span><span>Terrass</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
+            <div class="card-img-holder">
+                <span class="tag" style="background:#3498db; color:white;">Hyr</span>
+                <img src="https://images.unsplash.com/photo-1531971511374-00b8e73449c2?q=80&w=800" alt="Benahavis Rental">
+            </div>
             <div class="card-content">
-                <span class="tag" style="background:#3498db; color:white;">Uthyres</span>
-                <h3>Sierra Blanca Penthouse</h3>
-                <span class="price">€4,500 / månad</span>
+                <h3>Sierra Blanca Suite</h3>
+                <span class="price">€4,800 / månad</span>
                 <p>Långtidsuthyrning i ett av Marbellas säkraste områden.</p>
-                <div class="info"><span>3 Sovrum</span><span>Gated Community</span></div>
+                <div class="info"><span>3 Sovrum</span><span>Gated Area</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
+            <div class="card-img-holder">
+                <span class="tag" style="background:#3498db; color:white;">Hyr</span>
+                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=800" alt=" Puerto Banus Apt">
+            </div>
             <div class="card-content">
-                <span class="tag" style="background:#3498db; color:white;">Uthyres</span>
                 <h3>Cala de Mijas Beach Apt</h3>
-                <span class="price">€1,800 / vecka</span>
+                <span class="price">€1,900 / vecka</span>
                 <p>Perfekt för barnfamiljen. Direkt tillgång till strandpromenaden.</p>
-                <div class="info"><span>3 Sovrum</span><span>Gemensam Pool</span></div>
+                <div class="info"><span>3 Sovrum</span><span>Pool</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img">
+            <div class="card-img-holder">
+                <span class="tag" style="background:#3498db; color:white;">Hyr</span>
+                <img src="https://images.unsplash.com/photo-1613553507447-557ff6309d94?q=80&w=800" alt="Estepona Townhouse">
+            </div>
             <div class="card-content">
-                <span class="tag" style="background:#3498db; color:white;">Uthyres</span>
-                <h3>Estepona Marina View</h3>
-                <span class="price">€1,500 / vecka</span>
-                <p>Härlig utsikt över hamnen och båtarna. Centralt läge.</p>
+                <h3>Estepona Old Town</h3>
+                <span class="price">€1,400 / vecka</span>
+                <p>Charmig lägenhet med utsikt över hamnen. Centralt läge.</p>
                 <div class="info"><span>2 Sovrum</span><span>A/C</span></div>
             </div>
         </div>
@@ -306,19 +344,18 @@
 </section>
 
 <section id="contact" class="contact-premium">
-    <div class="icon-wrap">✉</div>
+    <div class="contact-icon-wrap">✉</div>
     <h2>Kontakta Sebyon</h2>
-    <p>Vi hjälper dig att hitta rätt från Malaga till Estepona.</p>
-    <p style="color: #888;">info@sebyon.com | +46 70 355 55 73</p>
+    <p>Vi hjälper dig med hela din resa på Costa del Sol.info@sebyon.com | +46 70 355 55 73</p>
     <a href="mailto:info@sebyon.com" class="contact-btn">Skicka ett meddelande</a>
 </section>
 
 <a href="https://wa.me/46703555573" class="wa-float" target="_blank">
-    <span style="font-size: 30px;">💬</span>
+    💬
 </a>
 
 <footer>
-    © 2026 SEBYON REAL ESTATE - MALAGA TILL ESTEPONA
+    © 2026 SEBYON REAL ESTATE - COSTA DEL SOL
 </footer>
 
 </body>
