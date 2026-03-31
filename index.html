@@ -6,21 +6,14 @@
     <title>Sebyon Real Estate | Costa del Sol</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #C7A14A;
-            --dark: #0F1A24;
-            --darker: #080e14;
-            --transition: all 0.3s ease;
-        }
-
+        :root { --gold: #C7A14A; --dark: #0F1A24; --darker: #080e14; --transition: all 0.3s ease; }
         * { box-sizing: border-box; }
         body { margin: 0; font-family: 'Inter', sans-serif; color: white; background: var(--dark); line-height: 1.6; scroll-behavior: smooth; }
 
         header {
             position: fixed; width: 100%; top: 0; background: rgba(15, 26, 36, 0.95);
             padding: 15px 5%; display: flex; justify-content: space-between; align-items: center;
-            z-index: 1000; border-bottom: 1px solid rgba(199, 161, 74, 0.2);
-            backdrop-filter: blur(10px);
+            z-index: 1000; border-bottom: 1px solid rgba(199, 161, 74, 0.2); backdrop-filter: blur(10px);
         }
         .logo { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--gold); text-decoration: none; font-weight: 700; letter-spacing: 3px; }
         nav a { color: white; text-decoration: none; margin-left: 15px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
@@ -28,7 +21,7 @@
         .hero {
             height: 80vh;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(15, 26, 36, 1)),
-                        url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?q=80&w=2000'); 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000'); 
             background-size: cover; background-position: center;
             display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
         }
@@ -58,20 +51,11 @@
         .price { font-size: 22px; font-weight: 600; color: white; display: block; margin: 10px 0; }
 
         .contact-premium { background: var(--darker); padding: 100px 5%; text-align: center; border-top: 1px solid rgba(199, 161, 74, 0.2); }
-        .mail-frame { 
-            width: 90px; height: 90px; border: 2px solid var(--gold); margin: 0 auto 25px; 
-            display: flex; align-items: center; justify-content: center; font-size: 35px; color: var(--gold);
-            transform: rotate(45deg); 
-        }
-        .mail-frame span { transform: rotate(-45deg); }
         .contact-btn { display: inline-block; padding: 15px 40px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; text-transform: uppercase; font-weight: 600; margin-top: 20px; font-size: 12px; }
-
         .wa-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; z-index: 1000; }
         footer { padding: 40px; text-align: center; font-size: 11px; color: #444; }
         
-        @media (max-width: 500px) {
-            .services { grid-template-columns: 1fr 1fr; }
-        }
+        @media (max-width: 500px) { .services { grid-template-columns: 1fr 1fr; } }
     </style>
 </head>
 <body>
@@ -153,10 +137,10 @@
         <div class="card">
             <img class="card-img" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800">
             <div class="card-content">
-                <span class="tag">Marbella Golden Mile</span>
+                <span class="tag">Marbella</span>
                 <h3>Andaluz Heritage Villa</h3>
                 <span class="price">€2,450,000</span>
-                <p>Klassisk lyxvilla i hjärtat av Marbella. Privat pool.</p>
+                <p>Klassisk lyxvilla på Golden Mile. Privat pool och trädgård.</p>
             </div>
         </div>
         <div class="card">
@@ -189,7 +173,7 @@
                 <span class="tag">Puerto Banús</span>
                 <h3>Blue Ocean Villa</h3>
                 <span class="price">€9,500 / vecka</span>
-                <p>Gångavstånd till hamnen. Perfekt för den stora familjen.</p>
+                <p>Exklusivt läge vid hamnen. Perfekt för stora sällskap.</p>
             </div>
         </div>
         <div class="card">
@@ -198,14 +182,13 @@
                 <span class="tag">Mijas Costa</span>
                 <h3>Andaluz Oasis</h3>
                 <span class="price">€2,100 / vecka</span>
-                <p>Charmighet i andalusisk stil med privat trädgård och pool.</p>
+                <p>Charmighet i andalusisk stil med privat trädgård.</p>
             </div>
         </div>
     </div>
 </section>
 
 <section id="contact" class="contact-premium">
-    <div class="mail-frame"><span>✉</span></div>
     <h2>Börja din resa idag</h2>
     <p>info@sebyon.com | +46 70 355 55 73</p>
     <a href="mailto:info@sebyon.com" class="contact-btn">Boka Konsultation</a>
