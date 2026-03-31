@@ -25,18 +25,16 @@
         .logo { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--gold); text-decoration: none; font-weight: 700; letter-spacing: 3px; }
         nav a { color: white; text-decoration: none; margin-left: 15px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* HERO - SOLNEDGÅNG ÖVER HAVET */
         .hero {
             height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(15, 26, 36, 1)),
-                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000'); 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(15, 26, 36, 1)),
+                        url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?q=80&w=2000'); 
             background-size: cover; background-position: center;
             display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
         }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(35px, 6vw, 60px); margin: 0; }
         .hero p { color: var(--gold); text-transform: uppercase; letter-spacing: 4px; font-size: 14px; margin-top: 10px; }
 
-        /* TJÄNSTER - 2 ÖVER 2 */
         .services {
             padding: 0 5%; display: grid; grid-template-columns: repeat(2, 1fr);
             gap: 15px; margin-top: -60px; position: relative; z-index: 10;
@@ -53,13 +51,12 @@
         .section-title p { color: var(--gold); text-transform: uppercase; font-size: 11px; letter-spacing: 2px; }
 
         .grid { padding: 0 5% 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #121f2b; border: 1px solid rgba(255,255,255,0.05); overflow: hidden; }
+        .card { background: #121f2b; border: 1px solid rgba(255,255,255,0.05); overflow: hidden; display: flex; flex-direction: column; }
         .card-img { height: 250px; width: 100%; object-fit: cover; background: #0a1118; }
-        .card-content { padding: 25px; }
+        .card-content { padding: 25px; flex-grow: 1; }
         .tag { background: var(--gold); color: black; padding: 3px 10px; font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; display: inline-block; }
         .price { font-size: 22px; font-weight: 600; color: white; display: block; margin: 10px 0; }
 
-        /* KONTAKT GULDRAM */
         .contact-premium { background: var(--darker); padding: 100px 5%; text-align: center; border-top: 1px solid rgba(199, 161, 74, 0.2); }
         .mail-frame { 
             width: 90px; height: 90px; border: 2px solid var(--gold); margin: 0 auto 25px; 
@@ -81,7 +78,7 @@
 
 <header>
     <a href="#" class="logo">SEBYON</a>
-    <nav><a href="#offplan">New Release</a><a href="#sales">Sälj</a><a href="#contact">Kontakt</a></nav>
+    <nav><a href="#offplan">Off Plan</a><a href="#sales">Till Salu</a><a href="#rent">Uthyrning</a><a href="#contact">Kontakt</a></nav>
 </header>
 
 <section class="hero">
@@ -109,7 +106,7 @@
 </section>
 
 <section id="offplan">
-    <div class="section-title"><p>Higuerón Specialist</p><h2>New Release</h2></div>
+    <div class="section-title"><p>Investeringar</p><h2>Off Plan</h2></div>
     <div class="grid">
         <div class="card">
             <img class="card-img" src="Veridian – medel.png">
@@ -121,12 +118,21 @@
             </div>
         </div>
         <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800">
+            <img class="card-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800">
             <div class="card-content">
                 <span class="tag">Färdig 2027</span>
                 <h3>Azure Heights</h3>
                 <span class="price">Från €720,000</span>
                 <p>Wellness och lyx kombinerat i andalusisk natur.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1600566752355-35792bedbbba?q=80&w=800">
+            <div class="card-content">
+                <span class="tag">Färdig 2027</span>
+                <h3>The Sky Loft II</h3>
+                <span class="price">Från €585,000</span>
+                <p>Modern design med fokus på ljus och rymd i Higuerón.</p>
             </div>
         </div>
     </div>
@@ -141,16 +147,58 @@
                 <span class="tag">El Higuerón</span>
                 <h3>Lomas 2</h3>
                 <span class="price">€699,000</span>
-                <p>3 sovrum. Toppskick med vidsträckt utsikt.</p>
+                <p>3 sovrum. Toppskick med vidsträckt utsikt över kusten.</p>
             </div>
         </div>
         <div class="card">
             <img class="card-img" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800">
             <div class="card-content">
-                <span class="tag">Marbella</span>
+                <span class="tag">Marbella Golden Mile</span>
                 <h3>Andaluz Heritage Villa</h3>
                 <span class="price">€2,450,000</span>
-                <p>Klassisk lyxvilla på Golden Mile.</p>
+                <p>Klassisk lyxvilla i hjärtat av Marbella. Privat pool.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=800">
+            <div class="card-content">
+                <span class="tag">Estepona</span>
+                <h3>Beachside Mansion</h3>
+                <span class="price">€1,890,000</span>
+                <p>Moderniserad andalusisk mansion precis vid strandkanten.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="rent">
+    <div class="section-title"><p>Short Term</p><h2>Uthyrning</h2></div>
+    <div class="grid">
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800">
+            <div class="card-content">
+                <span class="tag">Higuerón</span>
+                <h3>Sky View Penthouse</h3>
+                <span class="price">€2,800 / vecka</span>
+                <p>Takvåning med privat pool och magisk utsikt över bukten.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800">
+            <div class="card-content">
+                <span class="tag">Puerto Banús</span>
+                <h3>Blue Ocean Villa</h3>
+                <span class="price">€9,500 / vecka</span>
+                <p>Gångavstånd till hamnen. Perfekt för den stora familjen.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=800">
+            <div class="card-content">
+                <span class="tag">Mijas Costa</span>
+                <h3>Andaluz Oasis</h3>
+                <span class="price">€2,100 / vecka</span>
+                <p>Charmighet i andalusisk stil med privat trädgård och pool.</p>
             </div>
         </div>
     </div>
