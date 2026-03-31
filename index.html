@@ -6,7 +6,7 @@
     <title>Sebyon Real Estate | Costa del Sol</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C7A14A; --dark: #0F1A24; --darker: #080e14; --transition: all 0.3s ease; }
+        :root { --gold: #C7A14A; --dark: #0F1A24; --darker: #080e14; }
         * { box-sizing: border-box; }
         body { margin: 0; font-family: 'Inter', sans-serif; color: white; background: var(--dark); line-height: 1.6; scroll-behavior: smooth; }
 
@@ -51,7 +51,14 @@
         .price { font-size: 22px; font-weight: 600; color: white; display: block; margin: 10px 0; }
 
         .contact-premium { background: var(--darker); padding: 100px 5%; text-align: center; border-top: 1px solid rgba(199, 161, 74, 0.2); }
+        .mail-frame { 
+            width: 80px; height: 80px; border: 1px solid var(--gold); margin: 0 auto 25px; 
+            display: flex; align-items: center; justify-content: center; font-size: 30px; color: var(--gold);
+            transform: rotate(45deg); 
+        }
+        .mail-frame span { transform: rotate(-45deg); }
         .contact-btn { display: inline-block; padding: 15px 40px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; text-transform: uppercase; font-weight: 600; margin-top: 20px; font-size: 12px; }
+
         .wa-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; z-index: 1000; }
         footer { padding: 40px; text-align: center; font-size: 11px; color: #444; }
         
@@ -71,131 +78,47 @@
 </section>
 
 <section class="services">
-    <div class="service-box">
-        <h3>Försäljning</h3>
-        <p>Expertis inom lyxfastigheter och investeringar.</p>
-    </div>
-    <div class="service-box">
-        <h3>Off-Plan</h3>
-        <p>Säkra din investering i framtidens mest eftertraktade projekt.</p>
-    </div>
-    <div class="service-box">
-        <h3>Management</h3>
-        <p>Nyckelhantering, städning och tillsyn när du inte är på plats.</p>
-    </div>
-    <div class="service-box">
-        <h3>Inredning</h3>
-        <p>Skandinavisk stil som förvandlar ditt hus till ett hem.</p>
-    </div>
+    <div class="service-box"><h3>Försäljning</h3><p>Expertis inom lyxfastigheter och investeringar.</p></div>
+    <div class="service-box"><h3>Off-Plan</h3><p>Säkra din investering i framtidens mest eftertraktade projekt.</p></div>
+    <div class="service-box"><h3>Management</h3><p>Nyckelhantering, städning och tillsyn när du inte är på plats.</p></div>
+    <div class="service-box"><h3>Inredning</h3><p>Skandinavisk stil som förvandlar ditt hus till ett hem.</p></div>
 </section>
 
 <section id="offplan">
     <div class="section-title"><p>Investeringar</p><h2>Off Plan</h2></div>
     <div class="grid">
-        <div class="card">
-            <img class="card-img" src="Veridian – medel.png">
-            <div class="card-content">
-                <span class="tag">Färdig Q4 2026</span>
-                <h3>Prime Invest Veridian</h3>
-                <span class="price">Från €1,000,000</span>
-                <p>El Higuerón. Exklusiv arkitektur med panoramautsikt över havet.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800">
-            <div class="card-content">
-                <span class="tag">Färdig 2027</span>
-                <h3>Azure Heights</h3>
-                <span class="price">Från €720,000</span>
-                <p>Wellness och lyx kombinerat i andalusisk natur.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1600566752355-35792bedbbba?q=80&w=800">
-            <div class="card-content">
-                <span class="tag">Färdig 2027</span>
-                <h3>The Sky Loft II</h3>
-                <span class="price">Från €585,000</span>
-                <p>Modern design med fokus på ljus och rymd i Higuerón.</p>
-            </div>
-        </div>
+        <div class="card"><img class="card-img" src="Veridian – medel.png"><div class="card-content"><span class="tag">Q4 2026</span><h3>Prime Invest Veridian</h3><span class="price">Från €1,000,000</span><p>El Higuerón. Exklusiv arkitektur med panoramautsikt.</p></div></div>
+        <div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800"><div class="card-content"><span class="tag">2027</span><h3>Azure Heights</h3><span class="price">Från €720,000</span><p>Wellness och lyx kombinerat i andalusisk natur.</p></div></div>
+        <div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"><div class="card-content"><span class="tag">2027</span><h3>The Sky Loft II</h3><span class="price">Från €585,000</span><p>Modern design med fokus på ljus och rymd i Higuerón.</p></div></div>
     </div>
 </section>
 
 <section id="sales">
     <div class="section-title"><p>Portfolio</p><h2>Till Salu</h2></div>
     <div class="grid">
-        <div class="card">
-            <img class="card-img" src="Lomas 2 – medel.png">
-            <div class="card-content">
-                <span class="tag">El Higuerón</span>
-                <h3>Lomas 2</h3>
-                <span class="price">€699,000</span>
-                <p>3 sovrum. Toppskick med vidsträckt utsikt över kusten.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800">
-            <div class="card-content">
-                <span class="tag">Marbella</span>
-                <h3>Andaluz Heritage Villa</h3>
-                <span class="price">€2,450,000</span>
-                <p>Klassisk lyxvilla på Golden Mile. Privat pool och trädgård.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=800">
-            <div class="card-content">
-                <span class="tag">Estepona</span>
-                <h3>Beachside Mansion</h3>
-                <span class="price">€1,890,000</span>
-                <p>Moderniserad andalusisk mansion precis vid strandkanten.</p>
-            </div>
-        </div>
+        <div class="card"><img class="card-img" src="Lomas 2 – medel.png"><div class="card-content"><span class="tag">El Higuerón</span><h3>Lomas 2</h3><span class="price">€699,000</span><p>3 sovrum. Toppskick med vidsträckt utsikt över kusten.</p></div></div>
+        <div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800"><div class="card-content"><span class="tag">Marbella</span><h3>Heritage Villa</h3><span class="price">€2,450,000</span><p>Klassisk lyxvilla på Golden Mile. Privat pool.</p></div></div>
+        <div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=800"><div class="card-content"><span class="tag">Estepona</span><h3>Beachside Mansion</h3><span class="price">€1,890,000</span><p>Moderniserad andalusisk mansion precis vid strandkanten.</p></div></div>
     </div>
 </section>
 
 <section id="rent">
     <div class="section-title"><p>Short Term</p><h2>Uthyrning</h2></div>
     <div class="grid">
-        <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800">
-            <div class="card-content">
-                <span class="tag">Higuerón</span>
-                <h3>Sky View Penthouse</h3>
-                <span class="price">€2,800 / vecka</span>
-                <p>Takvåning med privat pool och magisk utsikt över bukten.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800">
-            <div class="card-content">
-                <span class="tag">Puerto Banús</span>
-                <h3>Blue Ocean Villa</h3>
-                <span class="price">€9,500 / vecka</span>
-                <p>Exklusivt läge vid hamnen. Perfekt för stora sällskap.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=800">
-            <div class="card-content">
-                <span class="tag">Mijas Costa</span>
-                <h3>Andaluz Oasis</h3>
-                <span class="price">€2,100 / vecka</span>
-                <p>Charmighet i andalusisk stil med privat trädgård.</p>
-            </div>
-        </div>
+        <div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800"><div class="card-content"><span class="tag">Higuerón</span><h3>Sky View Penthouse</h3><span class="price">€2,800 / vecka</span><p>Takvåning med privat pool och magisk utsikt.</p></div></div>
+        <div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800"><div class="card-content"><span class="tag">Puerto Banús</span><h3>Blue Ocean Villa</h3><span class="price">€9,500 / vecka</span><p>Exklusivt läge vid hamnen. Perfekt för stora sällskap.</p></div></div>
+        <div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=800"><div class="card-content"><span class="tag">Mijas Costa</span><h3>Andaluz Oasis</h3><span class="price">€2,100 / vecka</span><p>Charmighet i andalusisk stil med privat trädgård.</p></div></div>
     </div>
 </section>
 
 <section id="contact" class="contact-premium">
+    <div class="mail-frame"><span>✉</span></div>
     <h2>Börja din resa idag</h2>
     <p>info@sebyon.com | +46 70 355 55 73</p>
     <a href="mailto:info@sebyon.com" class="contact-btn">Boka Konsultation</a>
 </section>
 
 <a href="https://wa.me/46703555573" class="wa-float" target="_blank">💬</a>
-
 <footer>© 2026 SEBYON REAL ESTATE • COSTA DEL SOL</footer>
 
 </body>
