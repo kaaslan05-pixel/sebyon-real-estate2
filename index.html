@@ -14,11 +14,13 @@
         .logo { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--gold); text-decoration: none; font-weight: 700; letter-spacing: 2px; }
         nav a { color: white; text-decoration: none; margin-left: 15px; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
 
-        .hero { height: 60vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(15, 26, 36, 1)), url('https://images.unsplash.com/photo-1539103096891-14ad10c56761?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 5vw, 50px); margin: 0; }
+        /* Stabil bakgrundsbild för hjälten */
+        .hero { height: 65vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(15, 26, 36, 1)), url('https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 5vw, 50px); margin: 0; color: white; }
+        .hero p { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-size: 14px; margin-top: 10px; }
 
         .services { padding: 0 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: -50px; position: relative; z-index: 10; }
-        .service-box { background: #162431; padding: 25px; text-align: center; border: 1px solid rgba(199, 161, 74, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .service-box { background: #162431; padding: 25px; text-align: center; border: 1px solid rgba(199, 161, 74, 0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .service-box h3 { color: var(--gold); margin-bottom: 5px; font-family: 'Playfair Display', serif; font-size: 18px; }
         .service-box p { font-size: 12px; margin: 0; color: #ccc; }
 
@@ -27,20 +29,20 @@
         .section-title p { color: var(--gold); text-transform: uppercase; font-size: 11px; letter-spacing: 2px; margin-top: 5px; }
 
         .grid { padding: 0 5% 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: #162431; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition); }
+        .card { background: #162431; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition); border-radius: 4px; overflow: hidden; }
         .card:hover { transform: translateY(-5px); border-color: var(--gold); }
-        .card-img { height: 220px; width: 100%; object-fit: cover; }
+        .card-img { height: 250px; width: 100%; object-fit: cover; background: #0a1118; }
         .card-content { padding: 20px; }
-        .tag { background: var(--gold); color: black; padding: 2px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: inline-block; }
+        .tag { background: var(--gold); color: black; padding: 3px 10px; font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: inline-block; border-radius: 2px; }
         .price { font-size: 20px; font-weight: 700; color: white; display: block; margin: 5px 0; }
 
-        .contact-premium { background: var(--darker); padding: 100px 5%; text-align: center; border-top: 1px solid rgba(199, 161, 74, 0.3); }
-        .big-mail { font-size: 80px; color: var(--gold); display: block; margin-bottom: 10px; }
-        .contact-btn { display: inline-block; padding: 15px 45px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; text-transform: uppercase; font-weight: 600; margin-top: 20px; transition: 0.3s; }
+        .contact-premium { background: var(--darker); padding: 120px 5%; text-align: center; border-top: 1px solid rgba(199, 161, 74, 0.4); }
+        .big-mail { font-size: 100px; color: var(--gold); display: block; margin-bottom: 15px; line-height: 1; }
+        .contact-btn { display: inline-block; padding: 18px 50px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; text-transform: uppercase; font-weight: 600; margin-top: 30px; transition: 0.3s; font-size: 14px; letter-spacing: 1px; }
         .contact-btn:hover { background: var(--gold); color: black; }
 
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; z-index: 1000; }
-        footer { padding: 30px; text-align: center; font-size: 12px; color: #555; background: #050a0f; }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        footer { padding: 40px; text-align: center; font-size: 12px; color: #555; background: #050a0f; border-top: 1px solid rgba(255,255,255,0.03); }
     </style>
 </head>
 <body>
@@ -56,102 +58,84 @@
 </header>
 
 <section class="hero">
-    <h1>Sebyon Real Estate</h1>
-    <p>Malaga - Estepona | Costa del Sol</p>
+    <h1>SEBYON REAL ESTATE</h1>
+    <p>Malaga - Estepona | El Higuerón Specialist</p>
 </section>
 
 <section class="services">
-    <div class="service-box"><h3>Försäljning</h3><p>Lyxfastigheter</p></div>
-    <div class="service-box"><h3>Off-Plan</h3><p>Nyproduktion</p></div>
-    <div class="service-box"><h3>Management</h3><p>Full service</p></div>
-    <div class="service-box"><h3>Inredning</h3><p>Designpaket</p></div>
+    <div class="service-box"><h3>Försäljning</h3><p>Premiumfastigheter</p></div>
+    <div class="service-box"><h3>Off-Plan</h3><p>Investeringar</p></div>
+    <div class="service-box"><h3>Management</h3><p>Tryggt ägande</p></div>
+    <div class="service-box"><h3>Inredning</h3><p>Fullt möblerat</p></div>
 </section>
 
 <section id="offplan">
-    <div class="section-title"><p>El Higuerón Focus</p><h2>New Releases</h2></div>
+    <div class="section-title"><p>Exklusivt i Fuengirola</p><h2>New Releases</h2></div>
     <div class="grid">
         <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">
+            <img class="card-img" src="image.png" alt="Veridian Projektet">
             <div class="card-content">
                 <span class="tag" style="background: #e74c3c; color: white;">Off-plan Q3 2027</span>
                 <h3>Prime Invest Veridian</h3>
                 <span class="price">Från €1,000,000</span>
-                <p>Exklusivt boende i El Higuerón med oslagbar utsikt.</p>
+                <p>El Higuerón. Exklusiv nyproduktion med oslagbar arkitektur.</p>
             </div>
         </div>
         <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80">
+            <img class="card-img" src="https://images.pexels.com/photos/7031406/pexels-photo-7031406.jpeg?auto=compress&w=800">
             <div class="card-content">
                 <span class="tag">Q3 2027</span>
                 <h3>The Sky Loft Phase II</h3>
                 <span class="price">Från €585,000</span>
-                <p>Minimalistisk lyx i hjärtat av Higuerón West.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80">
-            <div class="card-content">
-                <span class="tag">Q3 2027</span>
-                <h3>Azure Heights</h3>
-                <span class="price">Från €720,000</span>
-                <p>Lyxiga lägenheter nära sportklubben.</p>
+                <p>Minimalistisk design med enorma terrasser i Higuerón West.</p>
             </div>
         </div>
     </div>
 </section>
 
 <section id="sales">
-    <div class="section-title"><p>Portfolio</p><h2>Till Salu</h2></div>
+    <div class="section-title"><p>Vårt Urval</p><h2>Till Salu</h2></div>
     <div class="grid">
         <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80">
+            <img class="card-img" src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&w=800">
             <div class="card-content">
                 <span class="tag">Villa</span>
                 <h3>Villa Andalusia</h3>
                 <span class="price">€1,595,000</span>
-                <p>Benahavís. Modern villa med privat pool.</p>
+                <p>Benahavís. Modern andalusisk villa med privat pool.</p>
             </div>
         </div>
         <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1560185007-9f06086e379c?auto=format&fit=crop&w=800&q=80">
+            <img class="card-img" src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&w=800">
             <div class="card-content">
                 <span class="tag">Lägenhet</span>
                 <h3>Marbella Golden Mile</h3>
                 <span class="price">€895,000</span>
-                <p>Toppskick nära Puente Romano.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80">
-            <div class="card-content">
-                <span class="tag">Lägenhet</span>
-                <h3>Beachfront Estepona</h3>
-                <span class="price">€575,000</span>
-                <p>Hörnlägenhet med havsutsikt.</p>
+                <p>Toppskick i exklusiva Puente Romano-området.</p>
             </div>
         </div>
     </div>
 </section>
 
 <section id="rent">
-    <div class="section-title"><p>Short & Long Term</p><h2>Uthyrning</h2></div>
+    <div class="section-title"><p>Premium Rental</p><h2>Uthyrning</h2></div>
     <div class="grid">
         <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80">
+            <img class="card-img" src="https://images.pexels.com/photos/2096907/pexels-photo-2096907.jpeg?auto=compress&w=800">
             <div class="card-content">
                 <span class="tag" style="background:#3498db; color:white;">Hyr</span>
                 <h3>Puerto Banus Beach Villa</h3>
                 <span class="price">€9,500 / vecka</span>
-                <p>Semesterboende i absolut världsklass.</p>
+                <p>Lyxigt semesterboende precis vid havet.</p>
             </div>
         </div>
         <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80">
+            <img class="card-img" src="https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&w=800">
             <div class="card-content">
                 <span class="tag" style="background:#3498db; color:white;">Hyr</span>
                 <h3>Higueron Sea View Loft</h3>
                 <span class="price">€2,400 / vecka</span>
-                <p>Modern semesterlägenhet med spa access.</p>
+                <p>Modern lägenhet med spa och gym access.</p>
             </div>
         </div>
     </div>
@@ -166,7 +150,7 @@
 
 <a href="https://wa.me/46703555573" class="wa-float" target="_blank">💬</a>
 
-<footer>© 2026 SEBYON REAL ESTATE</footer>
+<footer>© 2026 SEBYON REAL ESTATE - COSTA DEL SOL</footer>
 
 </body>
 </html>
